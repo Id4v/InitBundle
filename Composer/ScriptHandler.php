@@ -11,7 +11,7 @@
 
 namespace Stikair\Bundle\InitBundle\Composer;
 
-use Symfony\Component\ClassLoader\ClassCollectionLoader;
+
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\PhpExecutableFinder;
 use Composer\Script\CommandEvent;
@@ -46,7 +46,7 @@ class ScriptHandler {
         static::executeCommand($event, $appDir, 'doctrine:database:create', $options['process-timeout']);
     }
 
-    public static function UpdateDb(CommandEvent $event) {
+    public static function updateDb(CommandEvent $event) {
 
         $options = self::getOptions($event);
         $appDir = $options['symfony-app-dir'];
